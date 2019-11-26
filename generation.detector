@@ -1,0 +1,82 @@
+checkYear();
+//This executes the actual code
+function checkYear(){
+    var rollNum = Randomizer.nextInt(1,3);
+//This randomizes a number 1-3 every time the program is run to assign to a random fact later
+    var yearBorn = readInt("Please enter a birth year between 1928-2019: ");
+//This asks for what year to check for the generation
+    if(yearBorn > 2019 || yearBorn < 1928){
+        println("Please enter valid number and year (Within 1928-2019)");
+//This tells the user they did something wrong if the year given was invalid
+    }else{
+        if(yearBorn <= 1945){
+            println("You are in the Silent Generation");
+            if(rollNum == 3){
+                println("They are in fact not very silent");
+            }
+            if(rollNum == 2){
+                println("They're really old");
+            }
+            if(rollNum == 1){
+                println("They're basically all retired now");
+            }
+        }
+//Silent Generation
+        if(yearBorn >= 1946 && yearBorn <= 1964){
+            println("OKAY BOOMER");
+            if(rollNum == 3){
+                println("For some reason they all hate their spouce");
+            }
+            if(rollNum == 2){
+                println("They ruined the economy");
+            }
+            if(rollNum == 1){
+                println("They polluted the earth a lot");
+            }
+        }
+//Boomers
+        if(yearBorn >= 1965 && yearBorn <= 1980){
+            println("You are in Generation X");
+            if(rollNum == 3){
+                println("Awkwardly in between Millenials and Boomers");
+            }
+            if(rollNum == 2){
+                println("A cool sounding name not gonna lie");
+            }
+            if(rollNum == 1){
+                println("Actually a really good generation");
+            }
+        }
+//Gen X
+        if(yearBorn >= 1981 && yearBorn <= 1996){
+            println("You are a Millennial");
+            if(rollNum == 3){
+                println("Like? avocado toast");
+            }
+            if(rollNum == 2){
+                println("Boomers hate them");
+            }
+            if(rollNum == 1){
+                println("Actually not that bad");
+            }
+        }
+//Millenial
+        if(yearBorn >= 1997){
+            println("You are in Generation Z");
+            if(rollNum == 3){
+                println("The current youngest generation");
+            }
+            if(rollNum == 2){
+                println("Probably gonna destroy the earth one day");
+            }
+            if(rollNum == 1){
+                println("Likes tik-tok");
+            }
+        }
+//Gen Z
+//These check if their year is part of a generation and then selects the random fact to go along with it
+        checkYear();
+//This calls the code to repeat again
+    }
+
+}
